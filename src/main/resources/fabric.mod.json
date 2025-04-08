@@ -1,0 +1,41 @@
+{
+	"schemaVersion": 1,
+	"id": "pop-cam-view",
+	"version": "${version}",
+	"name": "pop-cam-view",
+	"description": "Store camera positions and view them in a resizable window on your screen!",
+	"authors": [
+		"azulaFYRE"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/pop-cam-view/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"azula.popcamview.Popcamview"
+		],
+		"client": [
+			"azula.popcamview.PopCamViewClient"
+		]
+	},
+	"mixins": [
+		"pop-cam-view.mixins.json",
+		{
+			"config": "pop-cam-view.client.mixins.json",
+			"environment": "client"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=0.16.13",
+		"minecraft": "~1.21.5",
+		"java": ">=21",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "Block Counter!"
+	}
+}
